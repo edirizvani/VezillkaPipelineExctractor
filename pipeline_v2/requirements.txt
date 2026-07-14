@@ -1,0 +1,45 @@
+# ── PDF extraction ──────────────────────────────────────────────
+pdfplumber>=0.10.0
+pymupdf>=1.23.0
+
+# ── OCR (optional, for pre-2019 scanned PDFs) ──────────────────
+# pdf2image>=1.16.0
+# easyocr>=1.7.0
+
+# ── Language detection ──────────────────────────────────────────
+lingua-language-detector>=2.0.0
+langdetect>=1.0.9
+
+# ── Sentence splitting ─────────────────────────────────────────
+sacremoses>=0.1.1
+sentence-splitter>=1.4.0
+
+# ── Translation models ─────────────────────────────────────────
+transformers>=4.35.0
+torch>=2.1.0
+sacrebleu>=2.3.0
+
+# ── Semantic scoring ───────────────────────────────────────────
+sentence-transformers>=2.3.0
+
+# ── LASER3 embeddings ──────────────────────────────────────────
+laser-encoders>=0.0.1
+
+# ── COMET-QE ────────────────────────────────────────────────────
+unbabel-comet>=2.2.0
+
+# ── FAISS for dense retrieval ───────────────────────────────────
+faiss-cpu>=1.7.4
+
+# ── Deduplication ───────────────────────────────────────────────
+datasketch>=1.6.0
+
+# ── Data processing ─────────────────────────────────────────────
+pandas>=2.1.0
+numpy>=1.24.0
+datasets>=2.15.0
+
+# ── Utilities ───────────────────────────────────────────────────
+tqdm>=4.66.0
+python-dotenv>=1.0.0
+matplotlib>=3.8.0

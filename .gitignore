@@ -1,0 +1,69 @@
+# ──────────────────── DATA ────────────────────
+# ~34 GB of PDFs, extractions, alignments and exports. Regenerate by running the
+# pipeline — see data/README.md in each pipeline.
+pipeline_v1/data/*
+pipeline_v2/data/*
+
+# ...but keep the scraper catalogs and the committed samples.
+!pipeline_v1/data/catalog.json
+!pipeline_v1/data/catalog_1944_2000.json
+!pipeline_v1/data/samples/
+!pipeline_v1/data/README.md
+!pipeline_v2/data/samples/
+!pipeline_v2/data/README.md
+
+# ──────────────────── CREDENTIALS ────────────────────
+# GCP service account keys — never commit.
+vezilka-*.json
+*-service-account.json
+.env
+.env.local
+
+# ──────────────────── LOGS ────────────────────
+*.log
+*_log.txt
+logs/
+
+# ──────────────────── PYTHON ────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# ──────────────────── IDE / OS ────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
