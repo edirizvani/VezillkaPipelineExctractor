@@ -12,6 +12,21 @@ pipeline_v2/data/*
 !pipeline_v2/data/samples/
 !pipeline_v2/data/README.md
 
+# ...and the released corpora. v2 (the current corpus) ships as plain TSV;
+# the two v1 exports are >100 MB so they ship via Git LFS. Everything else in
+# these directories stays out — including the csv/jsonl copies of the same rows.
+!pipeline_v2/data/output/
+pipeline_v2/data/output/*
+!pipeline_v2/data/output/vezilka_v2_corpus.tsv
+!pipeline_v2/data/output/vezilka_v2_train.tsv
+!pipeline_v2/data/output/vezilka_v2_val.tsv
+!pipeline_v2/data/output/vezilka_v2_test.tsv
+
+!pipeline_v1/data/export/
+pipeline_v1/data/export/*
+!pipeline_v1/data/export/vezilka_mk_sq_full_meta.tsv
+!pipeline_v1/data/export/vezilka_mk_sq_cleaned.tsv
+
 # ──────────────────── CREDENTIALS ────────────────────
 # GCP service account keys — never commit.
 vezilka-*.json

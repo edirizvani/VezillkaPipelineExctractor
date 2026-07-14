@@ -59,18 +59,22 @@ python pipeline.py
 Some v2 stages (LaBSE embeddings, COMET scoring, back-translation) want a GPU — see
 `pipeline_v2/notebooks/` for the Colab runners.
 
-## The data is not in this repo
+## The corpus
 
-The full dataset is ~34 GB (31 GB of PDFs alone) and is deliberately gitignored. What *is*
-committed:
+**The released corpora are in this repo** — see **[`DATASET.md`](DATASET.md)** for schema and stats.
 
-- `pipeline_v1/data/catalog*.json` — the scraped issue catalogs, so you can re-download without
-  re-scraping the site
-- `pipeline_v1/data/samples/` — two sample gazette PDFs
-- `pipeline_v2/data/samples/sample_pairs.jsonl` — 200 aligned pairs, to show the output format
+- `pipeline_v2/data/output/*.tsv` — the current corpus: **81,351 pairs**, with train/val/test splits
+  and per-pair quality scores (LaBSE, LASER3, COMET-QE, back-translation)
+- `pipeline_v1/data/export/*.tsv` — the earlier v1 corpus (100,898 pairs), via **Git LFS**
 
-See `pipeline_v1/data/README.md` and `pipeline_v2/data/README.md` for the expected directory layout
-and how to regenerate everything.
+```bash
+git lfs install && git lfs pull   # needed only for the v1 files
+```
+
+The *source* data is not in the repo: 31 GB of gazette PDFs plus intermediate artifacts, ~34 GB in
+all, deliberately gitignored. The scraped catalogs (`pipeline_v1/data/catalog*.json`) and two sample
+PDFs are committed so you can re-download and re-run without re-scraping the site. See
+`pipeline_v1/data/README.md` and `pipeline_v2/data/README.md` for the expected layout.
 
 ## Credentials
 
